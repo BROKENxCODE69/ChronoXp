@@ -12,7 +12,7 @@ export default function LandingPage() {
 
   useEffect(() => {
     if (!isLoading && (user || isGuest)) {
-      router.push("/app")
+      router.push("/dashboard")
     }
   }, [user, isGuest, isLoading, router])
 

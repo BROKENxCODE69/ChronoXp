@@ -35,7 +35,7 @@ export default function DeepWorkPage() {
     const incompleteTasks = tasks.filter((t) => !t.completed)
 
     return (
-        <div className="flex flex-col h-[calc(100vh-4rem)] p-4 md:p-8 items-center justify-center relative">
+        <div className="flex flex-col min-h-[calc(100vh-6rem)] p-4 md:p-6 lg:p-8 items-center justify-center relative">
             <Button
                 variant="ghost"
                 size="icon"

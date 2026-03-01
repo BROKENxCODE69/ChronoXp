@@ -94,7 +94,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             setIsLoading(true)
             await signInWithPopup(auth, googleProvider)
             localStorage.removeItem("guestMode")
-            router.push("/app")
+            router.push("/dashboard")
         } catch (error) {
             console.error("Login failed:", error)
             alert("Login failed. Please try again or use Guest mode.")
@@ -106,7 +106,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const continueAsGuest = () => {
         setIsGuest(true)
         localStorage.setItem("guestMode", "true")
-        router.push("/app")
+        router.push("/dashboard")
     }
 
     const logout = async () => {

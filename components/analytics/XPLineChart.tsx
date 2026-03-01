@@ -66,11 +66,11 @@ export function XPLineChart({ data, title = "Weekly XP", description = "Your XP 
                             strokeWidth={2}
                             activeDot={{
                                 r: 6,
-                                style: { fill: "var(--theme-primary)", opacity: 0.8 },
+                                style: { fill: "var(--color-chart-1)", opacity: 0.8 },
                             }}
                             style={
                                 {
-                                    stroke: "var(--theme-primary)",
+                                    stroke: "var(--color-chart-1)",
                                 } as React.CSSProperties
                             }
                         />

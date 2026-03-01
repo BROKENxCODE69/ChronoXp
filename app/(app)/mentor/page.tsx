@@ -127,7 +127,7 @@ export default function MentorPage() {
     )
 
     return (
-        <div className="flex h-[calc(100vh-4rem)] gap-4 p-4 md:p-8 pt-6">
+        <div className="flex h-[calc(100vh-6rem)] gap-4 p-4 md:p-6 lg:p-8">
             {/* Chat Area */}
             <div className="flex-1 flex flex-col rounded-xl border bg-card text-card-foreground shadow">
                 <div className="flex items-center justify-between p-4 border-b">

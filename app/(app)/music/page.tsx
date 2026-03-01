@@ -48,14 +48,12 @@ export default function MusicPage() {
     }, {} as Record<string, MusicPlaylist[]>)
 
     return (
-        <div className="container mx-auto p-6 space-y-6">
-            <div className="flex justify-between items-center">
-                <div>
-                    <h1 className="text-3xl font-bold">🎧 Focus Music</h1>
-                    <p className="text-muted-foreground">
-                        Ambient music to enhance your productivity and flow state
-                    </p>
-                </div>
+        <div className="space-y-6 p-4 md:p-6 lg:p-8">
+            <div>
+                <h2 className="text-3xl font-bold tracking-tight text-balance">Focus Music</h2>
+                <p className="text-muted-foreground mt-1">
+                    Ambient music to enhance your productivity and flow state
+                </p>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-3">

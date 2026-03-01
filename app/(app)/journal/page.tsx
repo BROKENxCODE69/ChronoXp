@@ -67,9 +67,10 @@ export default function JournalPage() {
     const todayEntry = todayProgress?.journalEntry
 
     return (
-        <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-            <div className="flex items-center justify-between space-y-2">
-                <h2 className="text-3xl font-bold tracking-tight">Journal & Reflection</h2>
+        <div className="flex-1 space-y-6 p-4 md:p-6 lg:p-8">
+            <div>
+                <h2 className="text-3xl font-bold tracking-tight text-balance">Journal & Reflection</h2>
+                <p className="text-muted-foreground mt-1">Document your thoughts and weekly progress</p>
             </div>
 
             <Tabs defaultValue="daily" className="space-y-4">

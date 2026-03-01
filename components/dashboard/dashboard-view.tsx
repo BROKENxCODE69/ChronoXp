@@ -16,8 +16,9 @@ export default function DashboardView() {
 
   if (!profile || !todayProgress) return null
 
-  const xpProgress = (getXPProgressInLevel(profile.totalXP) / 1000) * 100
-  const nextLevelXP = getXPForNextLevel(profile.totalXP)
+  const stats = profile.stats
+  const xpProgress = (getXPProgressInLevel(stats.totalXP) / 1000) * 100
+  const nextLevelXP = getXPForNextLevel(stats.totalXP)
   const completedCount = todayProgress.tasks.filter((t) => t.completed).length
 
   return (
@@ -47,22 +48,22 @@ export default function DashboardView() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-3xl font-bold text-orange-500">{profile.currentStreak}</div>
-            <p className="text-xs text-muted-foreground mt-1">Longest: {profile.longestStreak} days</p>
+            <div className="text-3xl font-bold text-orange-500">{stats.currentStreak}</div>
+            <p className="text-xs text-muted-foreground mt-1">Longest: {stats.longestStreak} days</p>
           </CardContent>
         </Card>
 
         <Card className="glow-border bg-gradient-to-br from-card to-card/50">
           <CardHeader className="pb-3">
             <CardTitle className="text-sm font-medium flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-secondary" />
-              Level {profile.level}
+              <TrendingUp className="w-4 h-4 text-primary" />
+              Level {stats.level}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <Progress value={xpProgress} className="h-3 xp-bar" />
             <p className="text-xs text-muted-foreground mt-2">
-              {getXPProgressInLevel(profile.totalXP)} / 1000 XP to Level {profile.level + 1}
+              {getXPProgressInLevel(stats.totalXP)} / 1000 XP to Level {stats.level + 1}
             </p>
           </CardContent>
         </Card>
